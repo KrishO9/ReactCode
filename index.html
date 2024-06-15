@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=""stylesheet" href = "style.css"/>
+</head>
+<body>
+    <div id="root">
+        <h1>not rendered</h1>
+    </div>
+
+    <div id="'root2">
+    </div>
+    <script src="App.js"></script>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        /*const heading = React.createElement("h1",{
+            id : "id1",
+            className : "class1",
+            style : {color : "red"},
+        },"Namaste React");
+        console.log(heading);
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        ////passing the react element inside the root
+        root.render(heading);*/
+// Define the Greeting component using React.createElement
+
+        
+
+        // Create the root element using ReactDOM.createRoot
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+
+        const b = React.createElement(
+                'h1',
+                { className: 'greeting' },
+                'Hello ',
+                React.createElement('i', null, "Namaste"),
+                '. Welcome!',React.createElement("p",null,"This is a paragraph"),
+            );
+
+
+        // Render the React element
+        root.render(b);
+
+        //const root2 = ReactDOM.createRoot(document.getElementById('root2'));
+        
+        const heading1 = React.createElement("h1",null,"Hey I am h1");
+        const heading2 = React.createElement("h2",null,"Hey I am h2");
+        const structure = React.createElement("div",
+        {
+            id:"container"
+        },
+            [heading1,heading2]
+        );
+
+        root.render(structure);
+    </script>
+</html>
