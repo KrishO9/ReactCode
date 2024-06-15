@@ -4,6 +4,8 @@
   "description": "Learning React here",
   
   "scripts": {
+    "start" : "npx parcel index.html",
+    "production" : "npx parcel build index.html",
     "test": "jest"
   },
   "repository": {
